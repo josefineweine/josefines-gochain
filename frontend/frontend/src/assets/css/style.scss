@@ -1,0 +1,52 @@
+$hover-link: (
+  cursor: pointer,
+  color: #F5F5F5,
+  background: #CFD8DC,
+);
+
+@mixin hover-link {
+  cursor: map-get($hover-link, cursor);
+  color: map-get($hover-link, color);
+}
+
+@mixin hover-link-h1 {
+  cursor: map-get($hover-link, cursor);
+  color: map-get($hover-link, color);
+}
+
+@mixin hover-link-button {
+  cursor: map-get($hover-link, cursor);
+  color: map-get($hover-link, color);
+  border: map-get($hover-link, border);
+}
+
+@mixin hover-link-mine {
+  cursor: map-get($hover-link, cursor);
+  border: map-get($hover-link, border2);
+  background: #556cb8;
+}
+
+html, body {
+  height: 100%;
+  color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background-color: #F5F5F5;
+
+  #root {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+
+
+    main {
+      display: flex;
+      min-height: 90vh;
+      color: black;
+    }
+  }
+}

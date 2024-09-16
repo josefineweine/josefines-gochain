@@ -1,0 +1,234 @@
+.userinfo-wrapper {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.userinfo-frame {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  max-height: 800px;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+.userinfo-frame .exit-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  background-color: #007bff;
+  font-size: larger;
+  min-width: 40px;
+  min-height: 40px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.userinfo-frame .exit-button:hover {
+  background-color: #0062cc;
+}
+
+.userinfo-frame h2 {
+  font-size: 2rem;
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+.userinfo-frame .userinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.userinfo-frame form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+.userinfo-frame form h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: #007bff;
+}
+
+.userinfo-frame form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.userinfo-frame form .form-control label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userinfo-frame form .form-control input {
+  text-indent: 2px;
+  color: #333;
+  background-color: #cfd8dc;
+  min-height: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.userinfo-frame form .button-control {
+  margin: 3px;
+  width: 120px;
+  height: 50px;
+}
+
+.userinfo-frame form .button-control button {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: larger;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.userinfo-frame form .button-control button:hover {
+  background-color: #0062cc;
+}
+
+.userinfo-frame form .button-control button:active {
+  cursor: default;
+}
+
+.userinfo-frame .userinfo-button-wrapper,
+.userinfo-frame .button-wrapper {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.userinfo-frame .userinfo-button-wrapper .button-control,
+.userinfo-frame .button-wrapper .button-control {
+  margin: 3px;
+  width: 160px;
+  height: 60px;
+}
+
+.userinfo-frame .userinfo-button-wrapper .button-control button,
+.userinfo-frame .button-wrapper .button-control button {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: larger;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.userinfo-frame .userinfo-button-wrapper .button-control button:hover,
+.userinfo-frame .button-wrapper .button-control button:hover {
+  background-color: #0062cc;
+}
+
+.userinfo-frame .userinfo-button-wrapper .button-control button:active,
+.userinfo-frame .button-wrapper .button-control button:active {
+  cursor: default;
+}
+/*# sourceMappingURL=user.css.map */
