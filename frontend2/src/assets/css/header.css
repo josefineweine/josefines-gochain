@@ -1,0 +1,114 @@
+header {
+  width: 100%;
+}
+
+header .first-row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #007bff;
+  color: #fff;
+}
+
+header .first-row-wrapper .user-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header .first-row-wrapper .user-wrapper .tabler-icon-user-circle {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1px;
+}
+
+header .first-row-wrapper .user-wrapper button {
+  padding: 10px;
+  background-color: #007bff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .first-row-wrapper .user-wrapper button:hover {
+  background-color: #0062cc;
+}
+
+.navbar {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  overflow: hidden;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 10px;
+}
+
+.navbar ul li:hover {
+  background-color: #0062cc;
+}
+
+.navbar ul .active {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,161 @@
+.transact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.transact-wrapper h2 {
+  margin-top: 40px;
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.transact-wrapper .sender-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  max-width: 1024px;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.transact-wrapper .sender-info .info-item {
+  font-size: 1rem;
+  color: #333;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+.transact-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  max-width: 1024px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.transact-wrapper form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.transact-wrapper form .form-group label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #333;
+  text-align: right;
+  margin-right: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.transact-wrapper form .form-group input {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  height: 35px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.transact-wrapper form .form-group input:hover {
+  border-color: #b3b3b3;
+}
+
+.transact-wrapper form .form-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.transact-wrapper form .form-actions button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.transact-wrapper form .form-actions button:hover {
+  background-color: #0062cc;
+}
+
+.transact-wrapper form .form-actions button:active {
+  background-color: #66b0ff;
+  cursor: default;
+}
+
+.transact-wrapper .receipt-section {
+  width: 80%;
+  max-width: 1024px;
+  margin-top: 40px;
+}
+
+.transact-wrapper .receipt-section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+}
+
+.transact-wrapper .receipt-section .receipt {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.transact-wrapper .receipt-section .receipt h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.transact-wrapper .receipt-section .receipt .details {
+  font-size: 1rem;
+  color: #333;
+}
+
+.transact-wrapper .receipt-section .receipt .details .detail-item {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=transact.css.map */
