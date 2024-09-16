@@ -11,22 +11,29 @@ export const protect = asyncHandler(async (req, res, next) => {
   ) {
     token = req.headers.authorization.split(' ')[1];
   }
+  // Uncomment if you need cookie-based authentication
   // else if (req.cookies.token) {
   //   token = req.cookies.token;
   // }
 
   if (!token) {
-    next(new ErrorResponse('Permission denied', 401));
-  }
-  const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-  req.user = await User.findById(decodedToken.id);
-
-  if (!req.user) {
-    next(new ErrorResponse('Permission denied', 401));
+    return next(new ErrorResponse('Permission denied', 401));
   }
 
-  next();
+  try {
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = await User.findById(decodedToken.id);
+
+    if (!req.user) {
+      return next(new ErrorResponse('Permission denied', 401));
+    }
+
+    next();
+  } catch (err) {
+    return next(new ErrorResponse('Invalid token', 401));
+  }
 });
+
 export const authorize = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {

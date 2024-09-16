@@ -1,55 +1,72 @@
 import { transactionPool, wallet, blockchain } from '../server.mjs';
+import Wallet from '../models/Wallet.mjs';
 import Miner from '../models/Miner.mjs';
 
 export const addTransaction = (req, res, next) => {
-  let { amount, recipient } = req.body;
+  try {
+    let { amount, recipient } = req.body;
 
-  amount = parseInt(amount);
+    amount = parseInt(amount);
 
-  let transaction = transactionPool.transactionExist({
-    address: wallet.publicKey,
-  });
-
-  if (transaction) {
-    transaction.update({ sender: wallet, recipient, amount });
-  } else {
-    transaction = wallet.createTransaction({
-      recipient,
-      amount,
-      chain: blockchain.chain,
+    let transaction = transactionPool.transactionExist({
+      address: wallet.publicKey,
     });
+
+    if (transaction) {
+      transaction.update({ sender: wallet, recipient, amount });
+    } else {
+      transaction = wallet.createTransaction({
+        recipient,
+        amount,
+        chain: blockchain.chain,
+      });
+    }
+
+    transactionPool.addTransaction(transaction);
+
+    res.status(201).json({ success: true, statusCode: 201, data: transaction });
+  } catch (error) {
+    next(error);
   }
-
-  transactionPool.addTransaction(transaction);
-
-  res.status(201).json({ success: true, statusCode: 201, data: transaction });
 };
 
 export const getWalletBalance = (req, res, next) => {
-  const address = wallet.publicKey;
-  const balance = Wallet.calculateBalance({ chain: blockchain.chain, address });
+  try {
+    const address = wallet.publicKey;
+    const balance = Wallet.calculateBalance({ chain: blockchain.chain, address });
 
-  res
-    .status(200)
-    .json({ success: true, statusCode: 200, data: { address, balance } });
+    res
+      .status(200)
+      .json({ success: true, statusCode: 200, data: { address, balance } });
+  } catch (error) {
+    next(error);
+  }
 };
 
 export const getTransactionPool = (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    statusCode: 200,
-    data: transactionPool.transactionMap,
-  });
+  try {
+    res.status(200).json({
+      success: true,
+      statusCode: 200,
+      data: transactionPool.transactionMap,
+    });
+  } catch (error) {
+    next(error);
+  }
 };
 
 export const mineTransactions = (req, res, next) => {
-  const miner = new Miner({
-    blockchain,
-    transactionPool,
-    wallet,
-  });
+  try {
+    const miner = new Miner({
+      blockchain,
+      transactionPool,
+      wallet,
+    });
 
-  const minedBlock = miner.mineTransaction();
+    const minedBlock = miner.mineTransaction();
 
-  res.status(200).json({ success: true, statusCode: 200, data: minedBlock });
+    res.status(200).json({ success: true, statusCode: 200, data: minedBlock });
+  } catch (error) {
+    next(error);
+  }
 };
